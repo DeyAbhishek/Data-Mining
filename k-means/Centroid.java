@@ -1,14 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package kmean2;
 
-/**
- *
- * @author Abhishek Dey
- */
 
 
 /**
