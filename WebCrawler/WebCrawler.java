@@ -15,7 +15,7 @@ public class WebCrawler {
 	private Queue<String> queue;  //type is String since URLs are String
 	private List<String> discoveredWebsiteList;
 	
-	private int depth = 0;  // depth in the network till which we will continue searching
+	private int websitesProcessedFromQueue = 0;  
 
 	public WebCrawler() {
 		queue = new LinkedList<>();
@@ -51,9 +51,9 @@ public class WebCrawler {
 				}
 			}
 			
-			depth++;
-			if (depth == 10) {
-				break;  // searching only till depth = 10 when we have to many websites crawled
+			websitesProcessedFromQueue++;
+			if (websitesProcessedFromQueue == 10) {
+				break;  // stop condition: stop after processing children of first 10 websites from queue
 			}
 		}
 	}
